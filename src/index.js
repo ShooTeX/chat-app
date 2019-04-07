@@ -27,4 +27,4 @@ io.on('connection', (socket) => {
     io.emit('message', 'A user has left!');
   });
 });
-server.listen(3000, () => console.log(`Server is up on ${port}`));
+server.listen(port, () => console.log(`Server is up on ${port}`));
