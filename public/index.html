@@ -5,9 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>STX Chat App</title>
+  <link rel="icon" href="favicon.png">
 
   <link rel="stylesheet" type="text/css" href="/css/semantic/semantic.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="/css/semantic/semantic.min.js"></script>
@@ -25,12 +28,41 @@
     <div class="row">
       <div class="column">
         <div class="ui text center container segment inverted raised">
-          <h1 class='ui center header inverted'>Chat App</h1>
+          <h1 class='ui center header inverted'><i class="comments icon"></i>Chat App</h1>
+          <div class="messageBox inverted">
+            <p class="messageBox__message">
+              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
+            </p>
+            <p class="messageBox__message">
+              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
+            </p>
+            <p class="messageBox__message">
+              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
+            </p>
+            <p class="messageBox__message messageBox__message--self">
+              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
+            </p>
+            <p class="messageBox__message">
+              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
+            </p>
+            <p class="messageBox__message">
+              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
+            </p>
+            <p class="messageBox__message">
+              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
+            </p>
+            <p class="messageBox__message">
+              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
+            </p>
+            <p class="messageBox__message">
+              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
+            </p>
+          </div>
           <div class="ui divider inverted"></div>
           <form>
             <div class="ui mini fluid inverted action input">
-              <input id="messageBox" type="text" placeholder="">
-              <button id="sendButton" class="ui teal icon button"><i class="arrow alternate circle right outline icon"></i></button>
+              <input id="messageBox" type="text" placeholder="Start chatting...">
+              <button type="submit" id="sendButton" class="ui teal icon button"><i class="arrow alternate circle right outline icon"></i></button>
             </div>
           </form>
         </div>
