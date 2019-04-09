@@ -27,8 +27,8 @@ io.on('connection', (socket) => {
       io.to(room).emit('message', { message, oUsername });
     });
   });
-  socket.on('leave', ({ username, room }) => {
-    socket.broadcast.to(room).emit('message', { message: `${username} has left!`, oUsername: 'Server' });
+  socket.on('disconnect', (socket) => {
+
   });
 });
 server.listen(port, () => console.log(`Server is up on ${port}`));
