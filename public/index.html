@@ -23,57 +23,37 @@
   }
 </style>
 
-<body style="background-color: black">
-  <div id="content" class="ui devided grid middle aligned">
-    <div class="row">
-      <div class="column">
-        <div class="ui text center container segment inverted raised">
-          <h1 class='ui center header inverted'><i class="comments icon"></i>Chat App</h1>
-          <div class="messageBox inverted">
-            <p class="messageBox__message">
-              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
-            </p>
-            <p class="messageBox__message">
-              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
-            </p>
-            <p class="messageBox__message">
-              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
-            </p>
-            <p class="messageBox__message messageBox__message--self">
-              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
-            </p>
-            <p class="messageBox__message">
-              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
-            </p>
-            <p class="messageBox__message">
-              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
-            </p>
-            <p class="messageBox__message">
-              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
-            </p>
-            <p class="messageBox__message">
-              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
-            </p>
-            <p class="messageBox__message">
-              test asdj alksdjlasj alkdsjladj asldkja ajkd alksjd akjsd kljalk djalksdj alksjdlakj sdlkaj sdlkajs
-            </p>
-          </div>
-          <div class="ui divider inverted"></div>
-          <form>
-            <div class="ui mini fluid inverted action input">
-              <input id="messageBox" type="text" placeholder="Start chatting...">
-              <button type="submit" id="sendButton" class="ui teal icon button"><i class="arrow alternate circle right outline icon"></i></button>
+<body>
+  <div class="centeredBox">
+    <div class="ui text center segment inverted raised">
+        <h1 class='ui center header inverted'><i class="user icon"></i>Join</h1>
+        <div class="ui divider inverted"></div>
+        <form action="./chat.html" class="ui inverted form">
+          <div class="field">
+            <div class="ui labeled input">
+              <div class="ui label">
+                Username
+              </div>
+              <input type="text" name="username" required>
             </div>
-          </form>
-        </div>
-      </div>
+          </div>
+          <div class="field">
+            <div class="ui labeled input">
+              <div class="ui label">
+                Room
+              </div>
+              <input type="text" name="room" required>
+            </div>
+          </div>
+          <div class="field">
+              <button type="submit" class="big ui teal right labeled icon button fluid">
+                  <i class="right arrow icon"></i>
+                  Join
+                </button>
+          </div>
+        </form>
     </div>
   </div>
-
-
-  <script src="/socket.io/socket.io.js"></script>
-  <script src='/js/chat.js'>
-  </script>
 </body>
 
 </html>

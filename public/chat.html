@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>STX Chat App</title>
+  <link rel="icon" href="favicon.png">
+
+  <link rel="stylesheet" type="text/css" href="/css/semantic/semantic.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/css/semantic/semantic.min.js"></script>
+</head>
+
+<style>
+  #content {
+    height: 100vh;
+    width: 100%;
+  }
+</style>
+
+<body>
+  <div id="content" class="ui devided grid middle aligned">
+    <div class="row">
+      <div class="column">
+        <div class="ui text center container segment inverted raised">
+          <h1 class='ui center header inverted'><i class="comments icon"></i>Chat App</h1>
+          <div class="messageBox inverted">
+            <script id="messageTemplate" type="text/html">  
+              <div class="messageBox__message">
+                <div class="messageBox__user">
+                  <strong>
+                    {{ oUsername }}
+                  </strong>
+                </div>
+                <div class="messageBox__text">
+                  {{ message }}
+                </div>
+              </div>
+            </script>
+            <script id="messageTemplateSelf" type="text/html">  
+              <div class="messageBox__message messageBox__message--self">
+                <div class="messageBox__text">
+                  {{ message }}
+                </div>
+              </div>
+            </script>
+            <script id="messageTemplateServer" type="text/html">  
+              <div class="messageBox__message messageBox__message--server">
+                <div class="messageBox__text">
+                  <strong>{{ message }}</strong>
+                </div>
+              </div>
+            </script>
+            </div>
+          <div class="ui divider inverted"></div>
+          <form>
+            <div class="ui mini fluid inverted action input">
+              <input id="messageBox" type="text" placeholder="Start chatting...">
+              <button type="submit" id="sendButton" class="ui teal icon button"><i class="arrow alternate circle right outline icon"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.7.0/qs.min.js"></script>
+  <script src='/js/chat.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+</body>
+
+</html>

@@ -16,15 +16,19 @@ app.use(express.static(publicDirectoryPath));
 io.on('connection', (socket) => {
   console.log('New WebSocket connection');
 
-  socket.emit('message', 'Welcome!');
-  socket.broadcast.emit('message', 'A new user has joined!');
+  socket.on('join', ({ username, room }) => {
+    socket.join(room);
 
-  socket.on('newMessage', (message) => {
-    io.emit('message', message);
+    socket.emit('message', { message: 'Welcome!', oUsername: 'Server' });
+    socket.broadcast.to(room).emit('message', { message: `${username} has joined!`, oUsername: 'Server' });
+
+    socket.on('newMessage', ({ message, username: oUsername }) => {
+      console.log(oUsername);
+      io.to(room).emit('message', { message, oUsername });
+    });
   });
-
-  socket.on('disconnect', () => {
-    io.emit('message', 'A user has left!');
+  socket.on('leave', ({ username, room }) => {
+    socket.broadcast.to(room).emit('message', { message: `${username} has left!`, oUsername: 'Server' });
   });
 });
 server.listen(port, () => console.log(`Server is up on ${port}`));
