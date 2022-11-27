@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "mustache": "^3.0.1",
+    "prettier": "1.13.0",
     "sass": "^1.17.4",
     "socket.io": "^2.2.0"
   },
